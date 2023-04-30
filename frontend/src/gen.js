@@ -15,7 +15,6 @@ function Gen() {
       var opturl = otp(secret, username);
         return (
         <div className="box">
-            <h1>PeerBrain</h1>
             <h2>MFA setup for {username}</h2>
             <p>
                 Scan the QR code below with your authenticator app.
