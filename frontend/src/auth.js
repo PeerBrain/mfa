@@ -34,13 +34,9 @@ const AuthCheck = () => {
     );
     } else {
         return (
-            <div className="App">
-                <header className="App-header">
-                    <div>
-                        <h1>Not authenticated</h1>
-                    </div>
-                </header>    
-            </div>
+          <div class="box">
+          <h1 class="title">Not Authenticated</h1>
+      </div>
         );
     }
 };

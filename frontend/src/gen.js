@@ -14,8 +14,7 @@ function Gen() {
       const username = searchParams.get('username')
       var opturl = otp(secret, username);
         return (
-        <div className="App">
-          <header className="App-header">
+        <div className="box">
             <h1>PeerBrain</h1>
             <h2>MFA setup for {username}</h2>
             <p>
@@ -26,17 +25,16 @@ function Gen() {
                 <code>{secret}</code>
             </div>
             <QRCode value={opturl} renderAs="svg" />
-            <p2>Once setup in your auth app then enter the generated code bellow</p2>
+            <p>Once setup in your auth app then enter the generated code bellow.</p>
             <form onSubmit={handleSubmit(onSubmit)}>
-            <input type="number" placeholder="OTP" {...register("OTP", {required: true, maxLength: 11})} />
+            <input type="number" className="input" placeholder="OTP" {...register("OTP", {required: true, maxLength: 11})} />
             <input type="hidden" {...register("SECRET", {required: true})} value={secret} />
             <input type="hidden" {...register("TOKEN", {required: true})} value={token} />
             <input type="hidden" {...register("USERNAME", {required: true})} value={username} />
 
 
-            <input type="submit" />
+            <input className="button is-primary" type="submit" />
             </form>   
-          </header>
         </div>
       );
   }

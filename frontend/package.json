@@ -23,7 +23,7 @@
     "webpack": "^5.78.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER=none WDS_SOCKET_PORT=0 FAST_REFRESH=false react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
